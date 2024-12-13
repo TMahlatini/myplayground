@@ -1,9 +1,9 @@
 import { Controller } from "@hotwired/stimulus"
 import * as THREE from "three"
 import { OrbitControls } from "OrbitControls"
-import getStarfield from "./src/getStarfield.js"
-import {getFresnelMat} from "./src/getFresnelMat.js"
-import displayDaysSinceLaunch from "./src/getDate.js"
+import getStarfield  from "getStarfield";
+import { getFresnelMat } from "getFresnelMat";
+import  displayDaysSinceLaunch  from "getDate";
 
 // Connects to data-controller="earth"
 export default class extends Controller {
