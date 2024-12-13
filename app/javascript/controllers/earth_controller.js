@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import moment from "moment"
 import * as THREE from "three"
 import { OrbitControls } from "OrbitControls"
 import getStarfield from "./src/getStarfield.js"

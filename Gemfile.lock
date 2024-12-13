@@ -132,7 +132,8 @@ GEM
     matrix (0.4.2)
     mini_mime (1.1.5)
     minitest (5.25.4)
-    moment (0.1.0)
+    momentjs-rails (2.29.4.1)
+      railties (>= 3.1)
     msgpack (1.7.5)
     net-imap (0.5.1)
       date
@@ -204,6 +205,10 @@ GEM
     regexp_parser (2.9.3)
     reline (0.5.12)
       io-console (~> 0.5)
+    rename (1.1.0)
+      activesupport
+      rails (>= 3.0.0)
+      thor (>= 0.19.1)
     rexml (3.3.9)
     rubocop (1.69.1)
       json (~> 2.3)
@@ -291,9 +296,10 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  moment
+  momentjs-rails
   puma (>= 5.0)
   rails (~> 7.2.2)
+  rename
   rubocop-rails-omakase
   selenium-webdriver
   sprockets-rails
