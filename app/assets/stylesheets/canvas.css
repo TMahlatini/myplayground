@@ -33,8 +33,9 @@ main {
   color: #e5dfdf;
   background-color: rgba(0, 0, 0, 0.5);
   display: block;   
+  font-size: 1.35em;
   margin-bottom: 2em;
-  padding: 20px 30px;
+  padding: 5x 30px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   text-align: left;
@@ -45,8 +46,8 @@ main {
   position: relative;
   color: #e5dfdf;
   display: block;
-  font-size: 4em;
-  margin-bottom: 0.1em;
+  font-size: 3em;
+  margin-bottom: 0.00001em;
   font-weight: bold;
   text-align: center;
   width: auto;

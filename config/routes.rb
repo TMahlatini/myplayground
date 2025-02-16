@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   root "pages#home"
   get "about", to: "pages#about"
   get "notes", to: "pages#notes"
-  get "experiments", to: "pages#experiments"
+  get "now", to: "pages#now"
+  get "experiences", to: "pages#experiences"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
