@@ -2,7 +2,7 @@
 import moment from 'moment';
 
 export default function displayDaysSinceLaunch() {
-    // Read launch date from data attribute
+    // 
     requestAnimationFrame(this.displayDaysSinceLaunch.bind(this));
     const launchDateString = this.element.dataset.launchDate;
     const launchDate = moment(launchDateString, "YYYY-MM-DD HH:mm:ss", true);
@@ -13,7 +13,7 @@ export default function displayDaysSinceLaunch() {
       return;
     }
 
-    // Get today's date
+   
     const today = moment();
 
     const diffDays = today.diff(launchDate, 'days');

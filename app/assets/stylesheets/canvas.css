@@ -14,45 +14,62 @@ body {
 }
 
 
-h1, p {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    color: rgb(174, 54, 54);
-    
-}
-
 main {
     position: absolute;
     z-index: 1;
 }
 
-/* New Styles for Hello World Text */
-.hello-text {
-  position: fixed;           /* Fix the position relative to the viewport */
-  top: 20px;                 /* Distance from the top */
-  left: 20px;               /* Distance from the right */
-  color: #e5dfdf;            /* Text color */
-  font-size: 16px;           /* Font size */
-  font-family: 'Times New Roman', sans-serif; /* Font family */
-  z-index: 1000;             /* Ensure it sits above other elements */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-  padding: 10px 15px;        /* Padding around the text */
-  border-radius: 8px;        /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+
+.content-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.section-text {
+  position: relative;
+  color: #e5dfdf;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;   
+  margin-bottom: 2em;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  width: auto;
+}
+
+.section-text h1 {
+  position: relative;
+  color: #e5dfdf;
+  display: block;
+  font-size: 4em;
+  margin-bottom: 0.1em;
+  font-weight: bold;
+  text-align: center;
+  width: auto;
 }
 
 .footer {
-    position: fixed;
-    bottom: 1rem;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: center;
-    font-size: 1rem;
-    color: #fff;
-    font-family: Arial,sans-serif;
-    z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.footer p {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer a {
