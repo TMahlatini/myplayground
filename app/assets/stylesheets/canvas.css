@@ -33,7 +33,7 @@ main {
   color: #e5dfdf;
   background-color: rgba(0, 0, 0, 0.5);
   display: block;   
-  font-size: 1.35em;
+  font-size: 22px;
   margin-bottom: 2em;
   padding: 5x 30px;
   border-radius: 8px;
@@ -46,7 +46,7 @@ main {
   position: relative;
   color: #e5dfdf;
   display: block;
-  font-size: 3em;
+  font-size: 1em;
   margin-bottom: 0.00001em;
   font-weight: bold;
   text-align: center;
@@ -83,6 +83,53 @@ main {
   text-decoration: underline;
 }
 
+/* Updated Typewriter Animation for Right-to-Left Character Reveal */
+.typewriter-animation {
+  /* Make sure the container behaves as a shrinking/growing inline block */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+
+  /* Reverse the container flow so the reveal starts from the right */
+  direction: ltr;
+  text-align: center;
+
+  /* Animate the width from 0 to 100% with the appropriate number of steps.
+     Adjust the step count (here 50) to roughly match your character count. */
+  animation: typewriter 15s steps(100, end) forwards,
+             blinkingCursor 500ms step-end infinite;
+}
+
+/* Reset the inner anchor's writing direction so the text isn't reversed */
+.typewriter-animation a {
+  display: inline-block;
+  direction: ltr;
+
+  animation: bounce 2s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkingCursor {
+  from { border-right-color: rgba(255,255,255,0.75); }
+  to { border-right-color: transparent; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

@@ -47,7 +47,7 @@ export default class extends Controller {
 
   animate() {
     requestAnimationFrame(this.animate.bind(this));
-    this.starfield.rotation.y += 0.0007;
+    this.starfield.rotation.y += 0.0001;
     this.renderer.render(this.scene, this.camera);
     this.controls.update();
   }

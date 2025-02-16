@@ -3,8 +3,16 @@
     <div data-controller="starfield">
       <div data-starfield-target="canvasContainer"></div>
     </div>
-    <div class="hello-text">
-      <h1>Experiences!</h1>
+    <div class="content-container">
+      <div class="section-text">
+        <h1><a href="/about">About</a> | <a href="/now">Now</a> | <a href="/notes">Notes</a> | <a href="/experiences">Experiences</a></h1>
+      </div>
+      <div class="section-text">
+        <%= @markdown.html_safe %>
+      </div>
+      <div class="footer">
+        <p>© 2025 Terence Mahlatini | <a href="/">Home</a></p>
+      </div>
     </div>
   </body>
 </html>
