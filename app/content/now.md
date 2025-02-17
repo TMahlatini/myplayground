@@ -10,5 +10,5 @@ February 2025:
 4. Trying to get back into the habit of writing. 
 5. Working out 6-7 days a week. 
 6. Working on a rasberry pi project. 
-7. Developing this website. 
+7. Trying to populate this site with more content. 
 
