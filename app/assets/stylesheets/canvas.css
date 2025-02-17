@@ -26,21 +26,30 @@ main {
   margin: 0 auto;
   padding: 20px;
   z-index: 1000;
+  
 }
 
 .section-text {
   position: relative;
-  color: #e5dfdf;
+  color: #e2d9d9;
   background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Times New Roman', Times, serif;
   display: block;   
   font-size: 22px;
   margin-bottom: 2em;
-  padding: 5x 30px;
+  padding: 1px 30px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   text-align: left;
   width: auto;
 }
+.section-text pre{
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
 
 .section-text h1 {
   position: relative;
@@ -51,6 +60,22 @@ main {
   font-weight: bold;
   text-align: center;
   width: auto;
+}
+
+.section-text h1 a {
+  color: #5f5151;
+  text-decoration: underline;
+}
+
+.section-text a{
+  color: #e5dfdf;
+  text-decoration: underline;
+}
+
+.section-text h2{
+  color: #706868;
+  text-decoration: underline;
+  
 }
 
 .footer {

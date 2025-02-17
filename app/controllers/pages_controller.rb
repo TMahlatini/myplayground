@@ -19,11 +19,12 @@ class PagesController < ApplicationController
     @markdown = Kramdown::Document.new(@content).to_html
   end
 
-  def experiences
-    @content = File.read(Rails.root.join('app/content/experiences.md'))
+  def projects
+    @content = File.read(Rails.root.join('app/content/projects.md'))
     @markdown = Kramdown::Document.new(@content).to_html
   end
 
+  
 
 
 

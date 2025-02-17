@@ -5,14 +5,16 @@
     </div>
     <div class="content-container">
       <div class="section-text">
-        <h1> <a href="/about">About</a> | <a href="/now">Now</a> | <a href="/notes">Notes</a> | <a href="/experiences">Experiences</a></h1>
+        <h1> <a href="/about">About</a> |
+         <a href="/now">Now</a> |
+         <a href="/notes">Notes</a> |
+         <a href="/projects">Projects</a>
+        </h1>
       </div>
       <div class="section-text">
         <%= @markdown.html_safe %>
       </div>
-      <div class="footer">
-        <p>© 2025 Terence Mahlatini | <a href="/">Home</a></p>
-      </div>
+      <%= render 'shared/footer' %>
     </div>
   </body>
 </html>
