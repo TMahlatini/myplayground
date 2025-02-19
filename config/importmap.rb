@@ -10,6 +10,7 @@ pin "OrbitControls", to: "https://unpkg.com/three@0.143.0/examples/jsm/controls/
 pin "moment", to: "https://cdn.skypack.dev/moment"
 #pin "momentjs-rails", to: "moment.js"
 
+pin_all_from "app/javascript/controllers", under: "controllers"
 pin "getStarfield", to: "controllers/src/getStarfield.js"
 pin "getFresnelMat", to: "controllers/src/getFresnelMat.js"
 pin "getDate", to: "controllers/src/getDate.js"
