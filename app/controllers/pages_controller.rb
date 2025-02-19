@@ -14,16 +14,13 @@ class PagesController < ApplicationController
     @markdown = Kramdown::Document.new(@content).to_html
   end
 
-  def notes
-    @content = File.read(Rails.root.join('app/content/notes.md'))
-    @markdown = Kramdown::Document.new(@content).to_html
-  end
 
   def projects
     @content = File.read(Rails.root.join('app/content/projects.md'))
     @markdown = Kramdown::Document.new(@content).to_html
   end
 
+  
   
 
 
