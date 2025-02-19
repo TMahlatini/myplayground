@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import * as THREE from "three"
 import getStarfield from "getStarfield"
-import getAsteroids from "./src/getAsteroids"
+import getAsteroids from "getAsteroids"
 import { OrbitControls } from "OrbitControls"
 
 
@@ -43,7 +43,7 @@ export default class extends Controller {
     this.sunLight.position.set(-2, 0.5, 1.5);
     this.scene.add(this.sunLight);
 
-    // Add asteroids to the scene
+  
     this.asteroids = getAsteroids({ numAsteroids: 50 });
     this.scene.add(this.asteroids);
 
