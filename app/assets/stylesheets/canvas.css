@@ -29,7 +29,7 @@ main {
   
 }
 
-.section-text {
+.section-text{
   position: relative;
   color: #e2d9d9;
   background-color: rgba(0, 0, 0, 0.5);
@@ -43,13 +43,17 @@ main {
   text-align: left;
   width: auto;
 }
+
+.section-text.notes {
+  font-size: 10px !important;
+  color: #676262 !important;
+}
+
 .section-text pre{
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
 }
-
-
 
 .section-text h1 {
   position: relative;
