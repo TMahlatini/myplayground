@@ -1,0 +1,14 @@
+<div class="book-post-navigation">
+  <% if @prev %>
+    <% prev_identifier = File.basename(@prev, ".md") %>
+    <%= link_to "← Previous", book_post_path(prev_identifier), class: "nav-arrow prev" %>
+  <% end %>
+  <% if @next %>
+    <% next_identifier = File.basename(@next, ".md") %>
+    <%= link_to "Next →", book_post_path(next_identifier), class: "nav-arrow next" %>
+  <% end %>
+</div>
+
+<div class="book-post-content">
+  <%= @markdown.html_safe %>
+</div>

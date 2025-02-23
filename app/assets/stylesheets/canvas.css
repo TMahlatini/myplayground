@@ -168,9 +168,4 @@ main {
   }
 }
 
-@media (max-width: 480px) {
-  .hello-text {
-    font-size: 16px;
-    padding: 6px 10px;
-  }
-}
+@media (max

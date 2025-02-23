@@ -1,3 +1,12 @@
-<div class="section-text">
-  <%= @markdown.html_safe %>
+<div class="section-text random-list">
+  <h1>Random Thoughts</h1>
+  <div class="random-grid">
+    <% @random_posts.each do |post| %>
+      <div class="random-container">
+        <h2><%= post[:title] %></h2>
+        <p><%= post[:summary] %></p>
+        <%= link_to 'Read More', random_post_path(post[:identifier]), class: 'read-more-link' %>
+      </div>
+    <% end %>
+  </div>
 </div>
