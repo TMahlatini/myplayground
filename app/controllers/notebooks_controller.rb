@@ -30,6 +30,8 @@ class NotebooksController < ApplicationController
         end
 
         @content = File.read(file_path)
+        @content = @content.gsub(/^---(.*?)---/m, '')
+        @content = @content.gsub(/^#(.*?)#/, '')
         @markdown = Kramdown::Document.new(@content).to_html
 
         #navigation
@@ -61,6 +63,8 @@ class NotebooksController < ApplicationController
         end
 
         @content = File.read(file_path)
+        @content = @content.gsub(/^---(.*?)---/m, '')
+        @content = @content.gsub(/^#(.*?)#/, '')
         @markdown = Kramdown::Document.new(@content).to_html
 
         #navigation
@@ -90,6 +94,8 @@ class NotebooksController < ApplicationController
         end
 
         @content = File.read(file_path)
+        @content = @content.gsub(/^---(.*?)---/m, '')
+        @content = @content.gsub(/^#(.*?)#/, '')
         @markdown = Kramdown::Document.new(@content).to_html
 
         #navigation
@@ -120,5 +126,7 @@ class NotebooksController < ApplicationController
         end
         "..."
     end
+
+   
 
 end

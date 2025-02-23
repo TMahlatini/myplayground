@@ -14,7 +14,7 @@ export default class extends Controller {
     const h = window.innerHeight;
 
     this.renderer = new THREE.WebGLRenderer({antialias: true});
-    this.renderer.setSize(w, h);
+    this.setSize();
     this.canvasContainerTarget.appendChild(this.renderer.domElement);
 
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -47,7 +47,23 @@ export default class extends Controller {
     this.asteroids = getAsteroids({ numAsteroids: 50 });
     this.scene.add(this.asteroids);
 
+    this.resizeObserver = new ResizeObserver(() => this.setSize());
+    this.resizeObserver.observe(document.documentElement);
+
     this.animate();
+  }
+
+  setSize() {
+    const docWidth = document.documentElement.scrollWidth;
+    const docHeight = document.documentElement.scrollHeight;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    this.renderer.setSize(docWidth, docHeight);
+    this.renderer.domElement.style.width = docWidth + 'px';
+    this.renderer.domElement.style.height = docHeight + 'px';
+    this.camera.aspect = vw / vh;
+    this.camera.updateProjectionMatrix();
   }
 
   animate() {

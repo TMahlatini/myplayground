@@ -1,2 +1,12 @@
-<div class="section-text conversations-list">
-  <h1>Conversatio
+<div class="section-text books-list">
+  <h1>Conversations with Friends, Family and cool Strangers</h1>
+  <div class="books-grid">
+    <% @conversations.each do |conv| %>
+      <div class="book-container">
+        <h2><%= conv[:title] %></h2>
+        <p><%= conv[:summary] %></p>
+        <%= link_to 'Read More', conversation_post_path(conv[:identifier]), class: 'read-more-link' %>
+      </div>
+    <% end %>
+  </div>
+</div>
