@@ -164,9 +164,4 @@ main {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hello-text {
-    font-size: 18px;
-    padding: 8px 12px;
-  }
-}
-
-@media (max
+    font-size
