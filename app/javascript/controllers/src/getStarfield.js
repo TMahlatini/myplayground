@@ -40,7 +40,7 @@ export default function getStarfield({ numStars = 700 } = {}) {
     transparent: true,
     opacity: 0.5,
     blending: THREE.AdditiveBlending, 
-    depthWrite: false, // prevents depth conflicts that can dim the glow.
+    depthWrite: True, // prevents depth conflicts that can dim the glow.
     map: new THREE.TextureLoader().load("images/circle.png"),
   });
   const points = new THREE.Points(geo, mat);
