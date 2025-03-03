@@ -35,7 +35,7 @@ export default function getStarfield({ numStars = 600 } = {}) {
   
   //for glowing stars.
   const mat = new THREE.PointsMaterial({
-    size: 1, // Increase size to enhance the glow effect.
+    size: 0.75, // Increase size to enhance the glow effect.
     vertexColors: true,
     transparent: true,
     opacity: 0.5,
