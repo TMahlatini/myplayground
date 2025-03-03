@@ -35,12 +35,12 @@ export default function getStarfield({ numStars = 700 } = {}) {
   
   //for glowing stars.
   const mat = new THREE.PointsMaterial({
-    size: 0.6, // Increase size to enhance the glow effect.
+    size: 0.7, // Increase size to enhance the glow effect.
     vertexColors: true,
     transparent: true,
     opacity: 0.5,
     blending: THREE.AdditiveBlending, 
-    depthWrite: True, // prevents depth conflicts that can dim the glow.
+    depthWrite: true, // prevents depth conflicts that can dim the glow.
     map: new THREE.TextureLoader().load("images/circle.png"),
   });
   const points = new THREE.Points(geo, mat);
