@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-export default function getStarfield({ numStars = 600 } = {}) {
+export default function getStarfield({ numStars = 700 } = {}) {
   function randomSpherePoint() {
     const radius = Math.random() * 25 + 25;
     const u = Math.random();
@@ -35,7 +35,7 @@ export default function getStarfield({ numStars = 600 } = {}) {
   
   //for glowing stars.
   const mat = new THREE.PointsMaterial({
-    size: 0.75, // Increase size to enhance the glow effect.
+    size: 0.6, // Increase size to enhance the glow effect.
     vertexColors: true,
     transparent: true,
     opacity: 0.5,
