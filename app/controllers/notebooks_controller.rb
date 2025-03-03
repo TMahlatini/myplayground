@@ -16,8 +16,8 @@ class NotebooksController < ApplicationController
             {
                 identifier: File.basename(file, '.md'),
                 title: extract_title(content),
-                summary: extract_summary(content)
-
+                summary: extract_summary(content),
+                date: extract_date(content)
             }
         end
     end
@@ -50,7 +50,8 @@ class NotebooksController < ApplicationController
         {
             identifier: File.basename(file, '.md'),
             title: extract_title(content),
-            summary: extract_summary(content)
+            summary: extract_summary(content),
+            date: extract_date(content)
         }
         end
     end
@@ -81,7 +82,8 @@ class NotebooksController < ApplicationController
         {
             identifier: File.basename(file, '.md'),
             title: extract_title(content),
-            summary: extract_summary(content)
+            summary: extract_summary(content),
+            date: extract_date(content)
         }
        end
     end
@@ -127,6 +129,15 @@ class NotebooksController < ApplicationController
         "..."
     end
 
-   
+    def extract_date(content)
+        if content =~ /---(.*?)---/m
+            front_matter = Regexp.last_match(1)
+            if front_matter =~ /date:\s*(.*+)/
+                return $1.strip
+            end
+        end
+    end
+
+
 
 end

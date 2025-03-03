@@ -2,7 +2,7 @@
 
 Hi, I’m Terence Mahlatini. 
 
-I am currently a senior at Whitman College, graduating in May 2025 with a B.S. in Computer Science. Outside school, I like working out, reading science fiction and watching movies. 
+I am currently a senior at Whitman College, graduating in May 2025 with a B.S. in Computer Science. Quick facts: I like working out, reading science fiction and watching movies. 
 
 Timeless favorites: Interstellar and Foundation trilogy by Isaac Asimov. 
 

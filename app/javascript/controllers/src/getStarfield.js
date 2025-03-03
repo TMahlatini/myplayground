@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-export default function getStarfield({ numStars = 500 } = {}) {
+export default function getStarfield({ numStars = 600 } = {}) {
   function randomSpherePoint() {
     const radius = Math.random() * 25 + 25;
     const u = Math.random();
@@ -32,12 +32,16 @@ export default function getStarfield({ numStars = 500 } = {}) {
   const geo = new THREE.BufferGeometry();
   geo.setAttribute("position", new THREE.Float32BufferAttribute(verts, 3));
   geo.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
+  
+  //for glowing stars.
   const mat = new THREE.PointsMaterial({
-    size: 0.2,
+    size: 1, // Increase size to enhance the glow effect.
     vertexColors: true,
-    map: new THREE.TextureLoader().load(
-      "images/circle.png"
-    ),
+    transparent: true,
+    opacity: 0.5,
+    blending: THREE.AdditiveBlending, 
+    depthWrite: false, // prevents depth conflicts that can dim the glow.
+    map: new THREE.TextureLoader().load("images/circle.png"),
   });
   const points = new THREE.Points(geo, mat);
   return points;
