@@ -18,5 +18,5 @@ Fast-forward to August 2019. I had just been accepted to [Yale Young African Sch
 I’ll always be grateful for her. That chance encounter reminded me of something simple yet profound: kindness matters. You never know when a small gesture–hers to me, or maybe one day mine to someone else–could become a defining moment in their story.
 
 
-(posted on 22-02-2025)
+(edited on 24-03-2025)
 
