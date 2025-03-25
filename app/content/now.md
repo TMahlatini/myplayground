@@ -5,9 +5,7 @@
 March 2025: 
 
 1. Interning at [MulticoreWare](https://multicorewareinc.com/#)
-2. Wrapping up my senior capstone project. 
+2. Looking for a full-time job. 
 3. Rereading the Foundation Trilogy. 
-5. Working out 6-7 days a week. 
-6. Working on a rasberry pi project. 
 7. Trying to do weekly commits to this site.   
 

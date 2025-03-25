@@ -1,20 +1,30 @@
 
   <div class="section-text">
         <p>
-          "If people cannot write well, they 
-          cannot think well..." - George Orwell
-        </p>
-
-        <p>
-          <%= @markdown.html_safe %>
+          <%= @markdown.html_safe if @markdown.present? %>
         </p>
       </div>
 
 
-<div class="section-text">
-  <a href="/notebook/books"><h3>Books, Podcasts and Articles</h3></a>
-  <a href="/notebook/conversations"><h3>Conversations with Friends, Family and cool Strangers</h3></a>
-  <a href="/notebook/random"><h3>Reflections and random thoughts</h3></a>
+<div class="section-text bloglist">
+  <ol>
+    <% @posts.each do |post| %>
+      <li>
+        <% if post[:category] == 'book' %>
+          <%= link_to "#{post[:title]}", book_post_path(post[:identifier]) %>
+        <% elsif post[:category] == 'conversation' %>
+          <%= link_to "#{post[:title]}", conversation_post_path(post[:identifier]) %>
+        <% elsif post[:category] == 'random' %>
+            <%= link_to "#{post[:title]}", random_post_path(post[:identifier]) %>
+        <% else %>
+          <%= post[:title] %>
+       
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+
+  <p>If you find anything interesting here and want to continue the conversation, feel free to send me an <a href="mailto:terrencemahlatini@gmail.com">email.</a></p>
 </div>
 
 

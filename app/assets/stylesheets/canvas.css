@@ -44,6 +44,12 @@ main {
   width: auto;
 }
 
+.section-text.bloglist {
+  font-size: 10px 
+  color: white;
+  padding: 10px 10px;
+
+} 
 
 .section-text.notes {
   font-size: 10px !important;
@@ -165,3 +171,14 @@ main {
 @media (max-width: 768px) {
   .hello-text {
     font-size
+}
+
+.section-text.bloglist ol {
+  list-style-type: decimal;
+  padding-left: 20px;  /* indent the numbers */
+  font-size: 18px;     /* adjust as needed */
+}
+
+.section-text.bloglist li {
+  margin-bottom: 30px 
+}

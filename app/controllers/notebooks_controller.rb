@@ -5,8 +5,53 @@ class NotebooksController < ApplicationController
 
 
     def notebook
-        @content = File.read(Rails.root.join('app/content/NoteBook/notebook.md'))
-        @markdown = Kramdown::Document.new(@content).to_html
+        posts = []
+        @markdown = File.read(Rails.root.join('app/content/NoteBook/notebook.md'))
+
+        # Gather book posts
+        Dir.glob(Rails.root.join('app/content/NoteBook/books/*.md')).each do |file|
+            content = File.read(file)
+            posts << {
+                category: 'book',
+                identifier: File.basename(file, '.md'),
+                title: extract_title(content),
+                date: extract_date(content)
+            }
+        end
+
+        # Gather conversation posts
+        Dir.glob(Rails.root.join('app/content/NoteBook/conversations/*.md')).each do |file|
+            content = File.read(file)
+            posts << {
+                category: 'conversation',
+                identifier: File.basename(file, '.md'),
+                title: extract_title(content),
+                date: extract_date(content)
+            }
+        end
+
+        # Gather random posts
+        Dir.glob(Rails.root.join('app/content/NoteBook/random/*.md')).each do |file|
+            content = File.read(file)
+            posts << {
+                category: 'random',
+                identifier: File.basename(file, '.md'),
+                title: extract_title(content),
+                date: extract_date(content)
+            }
+        end
+
+        # Sort posts by date (newest first); if a post lacks a date or the date is unparsable, default to a very early date.
+        posts.sort_by! do |post|
+            begin
+                post[:date] ? Date.parse(post[:date]) : Date.new(0)
+            rescue ArgumentError
+                Date.new(0)
+            end
+        end
+        posts.reverse!
+
+        @posts = posts
     end
 
     # Books 
